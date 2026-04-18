@@ -1,0 +1,169 @@
+body {
+    font-family: Poppins, 'Noto Sans Devanagari', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+.center-page{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-weight: 500;
+    background-color: midnightblue;
+}
+.regi-form {
+    background-color: rgba(255, 254, 254, 0.1);
+    color: whitesmoke;
+    padding: 25px;
+    border-radius: 10px;
+    width: 500px;
+    font-size: 1.1rem;
+box-shadow: 0 10px 20px rgba(193, 5, 240, 0.7);  
+}
+.regi-form > p {
+    font-size: 1.3rem;
+}
+.regi-form > p::before{
+    content: "Note⚠️❗: ";
+}
+.main-details label {
+    display: block;
+    margin-top: 5px;
+}
+.main-details input {
+    width: 90%;
+    margin-top: 5px;
+    font-size: 1.1rem;
+    padding: 1px 0;
+}
+fieldset {
+    margin-top: 10px;
+}
+input, textarea {
+    background-color: rgba(255, 254, 254, 0.1);
+}
+input, input::placeholder,textarea{
+    color: whitesmoke;
+}
+input:focus, select:focus {
+  border-color: #28a745;
+  outline: none;
+}
+.custom-method {
+    appearance: none;
+    border: 2px solid rgb(197, 6, 255);
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+}
+.custom-method::before {
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+.custom-method:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(173, 4, 4);
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+}
+
+/* inner check box */
+.custom-checkbox::before {
+  content: "";
+  position: absolute;
+  background-color: lightgreen;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+/* when checked */
+.custom-checkbox:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+ 
+}
+.hidden-box{
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+#other-skill:checked ~ .hidden-box{
+    display: block;
+}
+.select-box-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.select-box-container select { 
+    font-size: 1.1rem;
+    background-color: rgba(255, 254, 254, 0.1);
+    color: whitesmoke;
+}
+.rate-icon1{
+    position: relative;
+    display: inline-flex;
+    margin-top: 15px;
+}
+.rate-icon2{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: whitesmoke;
+    pointer-events: none;
+}
+.rate-icon1 input{
+    padding-left: 20px;
+    height: 25px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.regi-btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  width: 80%;
+  margin-left: 40px;
+}
+.regi-btn button{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    color:white;
+    background-color:cornflowerblue;
+    font-size: 20px;
+    
+}
+.btn-sub:hover {
+  background-color: #63e643;
+}
+.btn-reset:hover{
+    background-color: rgb(185, 27, 27);   
+}
