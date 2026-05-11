@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Registration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+Devanagari&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"><!--font load ko pahle rkhna hai-->
+</head>
+
+<body>
+    <div class="center-page">
+        <form class="regi-form" action="#" method="POST"> <!--onsubmit="registerWorker(event)" modern use-->
+            <h1>Worker Registration Form</h1>
+            <p>Please Fill every details with carefully.</p>
+            <div class="main-details">
+                <label>Name: <input
+                        type="text"></label><!--implicit कोड छोटा होता है और id याद रखने की ज़रूरत नहीं पड़ती। कुछ पुराने ब्राउज़र्स या स्क्रीन रीडर्स के साथ इसमें दिक्कत आ सकती है-->
+                <label for="name">Full Name: </label>
+                <input type="text" id="name" name="name" placeholder="E.g. John Smith">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" maxlength="10" autocomplete="tel" name="phone"
+                    placeholder="E.g. 9999888877" pattern="[0-9]{10}">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="E.g. abics@gmail.com">
+            </div>
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+                <label for="email-radio">Email</label>
+                <input class="custom-method"type="radio" id="email-radio" value="email" name="contact-method" >
+                <label for="phone-radio">Phone</label>
+                <input class="custom-method" type="radio" id="phone-radio" value="phone" name="contact-method">
+            </fieldset>
+            <fieldset>
+                <legend>Select Skill</legend>
+                <input class="custom-checkbox" type="checkbox" name="skill" value="labour" id="labour">
+                <label for="labour">Labour</label>
+                <input class="custom-checkbox" type="checkbox" name="skill" value="painter" id="painter">
+                <label for="painter">Painter</label>
+                <input class="custom-checkbox" type="checkbox" name="skill" value="AC technician" id="technician">
+                <label for="technician">AC Technician</label>
+                <input class="custom-checkbox" type="checkbox" name="skill" value="electrician" id="electrician">
+                <label for="electrician">Electrician</label>
+                <input class="custom-checkbox" type="checkbox" name="skill" value="Other" id="other-skill">
+                <label for="other-skill">Others</label>
+                <textarea id="other-text" placeholder="please specify..." class="hidden-box" rows="4"
+                    cols="40"></textarea>
+            </fieldset>
+            <div class="select-box-container">
+                <div class="selection-group">
+                    <label for="id-proof">Select ID Proof: </label>
+                    <select id="id-proof" name="id-type" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="aadhaarcard">Aadhaar Card</option>
+                        <option value="pancard">Pan Card</option>
+                        <option value="voterid">Voter ID</option>
+                        <option value="rationcard">Ration Card</option>
+                        <option value="others">Other</option>
+                    </select>
+                </div>
+                <div class="selection-group">
+                    <label for="address-proof">Select Address Proof: </label>
+                    <select id="address-proof" name="address-proof-type">
+                        <option value="" disabled selected>Select</option>
+                        <option value="aadhaarcard">Aadhaar Card</option>
+                        <option value="rationcard">Ration Card</option>
+                        <option value="drivinglicence">Driving Licence</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rate-icon1"></div>
+            <label for="rate">&#8377; Rate</label>
+            <div class="rate-icon1">
+                <span class="rate-icon2">&#8377;</span>
+                <input type="number" id="rate" name="rate" placeholder="  E.g. 2000">
+            </div>
+            <div class="regi-btn">
+                <button class="btn-sub" type="submit">Register</button>
+                <button class="btn-reset" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
