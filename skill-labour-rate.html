@@ -7,6 +7,138 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+Devanagari&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .top-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.top-title h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.top-title p {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+}
+.ctrl-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+align-items: center;
+ width: 100%;
+}
+.ctrl-row input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: Poppins, 'Noto Sans Devanagari', sans-serif;
+}
+.ctrl-row input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+.ctrl-row button {   
+    padding: 8px 16px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #e1db1a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000;
+    font-weight: 600;   
+    font-family: Poppins, 'Noto Sans Devanagari', sans-serif;
+}
+.ctrl-row button:hover {
+    background-color: #1bd111;
+}
+.tabs-scroll {
+    display: flex;
+    overflow-x: auto; /*jyada tab hone par scroll karne ke liye */
+    border-bottom: 1px solid rgba(212, 22, 22, 0.2);
+    width: 100%;
+    margin-bottom: 0;
+}
+.tab {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.60);
+    cursor: pointer;
+    white-space: nowrap; /*tab ke text ko ek line me rakhne ke liye */
+    font-family: Poppins, 'Noto Sans Devanagari', sans-serif;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+.tab:hover {
+    color: rgba(255, 255, 255, 0.90);
+    border-bottom: 2px solid #0cf365;
+}
+.tab.active {
+    color: #fff;
+    border-bottom: 2px solid #0cf365;
+}
+.table-wrap {
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+thead tr {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 1em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    color: rgba(255, 255, 255, 0.85);
+    vertical-align: middle;
+}
+tbody tr:nth-child td {
+    border-bottom: none;
+}
+tbody tr:nth-child(even) {
+    background: rgba(130, 194, 161, 0.116);
+}
+tbody tr:hover {
+    background: rgba(160, 168, 168, 0.442);
+}
+.rate-cell {
+    font-weight: 600;
+    color: #0faece;
+}
+.footer {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.footer span {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.55);
+}
+    </style>
     <title>Skill Labour Rate</title>
 </head>
 
@@ -27,7 +159,7 @@
         <div class="tab">Carpentry</div>
         <div class="tab">Electrical</div>
     </div>
-    <div class="center-page">
+    <div class="table-wrap">
         <table>
             <thead>
                 <tr>
@@ -41,31 +173,31 @@
                 <tr>
                     <td>1</td>
                     <td>Ac Jet Service</td>
-                    <td>&#8377; 500/AC</td>
+                    <td class="rate-cell">&#8377; 500/AC</td>
                     <td>Edit | Delete</td>
                 </tr>
                 <tr>
                     <td>2</td> 
                     <td>AC Installation</td>
-                    <td>&#8377; 1200/AC</td>
+                    <td class="rate-cell">&#8377; 1200/AC</td>
                     <td>Edit | Delete</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>Electrician (General)</td>
-                    <td>&#8377; 49/Onwards</td>
+                    <td class="rate-cell">&#8377; 49/Onwards</td>
                     <td>Edit | Delete</td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>Plumber</td>
-                    <td>&#8377; 100/Onwards</td>
+                    <td class="rate-cell">&#8377; 100/Onwards</td>
                     <td>Edit | Delete</td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>Carpenter</td>
-                    <td>&#8377; 70/Onwards</td>
+                    <td class="rate-cell">&#8377; 70/Onwards</td>
                     <td>Edit | Delete</td>
                 </tr>
             </tbody>
